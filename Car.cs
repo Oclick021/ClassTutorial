@@ -7,7 +7,7 @@
         bool airco;
         int airbacks;
 
-
+        public bool IsLocked { get; set; }
         public string Name { get; set; }
         public string Model { get; set; }
         public CarPaint CarPaint { get; set; }
@@ -23,5 +23,28 @@
             Model = model;
         }
 
+
+        public void Lock()
+        {
+            IsLocked = true;
+        }
+
+
+        public void UnLock()
+        {
+            IsLocked = false;
+        }
+
+        public void ToggleLock()
+        {
+            if (IsLocked)
+            {
+                UnLock();
+            }
+            else
+            {
+                Lock();
+            }
+        }
     }
 }
