@@ -3,11 +3,15 @@ using ClassTutorial;
 
 Console.WriteLine("Hello, World!");
 
+//Add Model to cars 
+//Add new car chasisnumber LMN => Logan black with grey bumper. 
+
 
 Car Quick = GiveMeCarInfo("ABC");
 Car Pride = GiveMeCarInfo("GHI");
 Car Peykan = GiveMeCarInfo("");
 Car P206 = GiveMeCarInfo("DEF");
+Car Logan = GiveMeCarInfo("LMN");
 
 
 Console.WriteLine(Quick.Name);
@@ -22,12 +26,15 @@ Car GiveMeCarInfo(string chasisNumber)
         case "ABC":
             //IT is a Quick R with Grey bumper and black hood
             car.Name = "Quick";
+            car.Model = "R";
             car.CarPaint = new CarPaint("White", "Black", "White", "Grey");
+
             break;
 
         case "DEF":
             // 206 Type 5 white
             car.Name = "Peagut 206";
+            car.Model = "Type 5";
             car.CarPaint = new CarPaint("White");
 
             break;
@@ -35,13 +42,25 @@ Car GiveMeCarInfo(string chasisNumber)
         case "GHI":
             // Pride 110 daghoon
             car.Name = "Saipa 110";
+            car.Model = "Pride daghoon";
             car.CarPaint = new CarPaint("Silver");
 
             break;
+
+        case "LMN":
+            // Logan
+            car.Name = "Renault";
+            car.Model = "Logan";
+            car.CarPaint = new CarPaint("Beige");
+
+            break;
+
         default:
-            //Peykan
-            car.Name = "Peykan Javanan";
+            //Peykan Javanan
+            car.Name = "Iran Khodro";
+            car.Model = "Peykan Javanan";
             car.CarPaint = new CarPaint("Gojeyi");
+
             break;
     }
     return car;
