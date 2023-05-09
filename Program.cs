@@ -12,7 +12,15 @@ Car Pride = GiveMeCarInfo("GHI");
 Car Peykan = GiveMeCarInfo("");
 Car P206 = GiveMeCarInfo("DEF");
 Car Logan = GiveMeCarInfo("LMN");
+List<Car> Cars = new List<Car>();
+Cars.Add(Quick);
+Cars.Add(Pride);
+Cars.Add(Peykan);
+Cars.Add(P206);
+Cars.Add(Logan);
 
+
+//Lock the cars that have Beige color from the list. 
 
 Console.WriteLine(Quick.Name);
 
